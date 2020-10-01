@@ -28,7 +28,7 @@ Run (port 3333):
 ```
 $ npm start
 ```
-## Explanation
+## :question: Explanation
 First, is necessary to know what a Middleware is. In *Express.js*, Middlewares are functions that have access to *request* and *response*. They can execute any code, make changes to *requests* and *responses*, end the request-response cycle, call the next middleware. One point is important to highlight: a Middleware called first will also be executed first.
 
 Note that the **Error Handler Middleware** is being defined after all other middleware (*app.use* and *route calls*).
@@ -39,7 +39,7 @@ Simulating a login service, the application verify the credentials. This is done
 
 To make understanding easier and more practical, no connection to a database is being made. Instead, the system just checks that the Username is "AdminUser" and the password is "admin123". If these credentials are valid, the User will receive a success message. If not. Otherwise will receive a error message, specifying what went wrong.
  
-## Throwing error
+## :x: Throwing error
 Express.js identifies an Error Handler Middleware through a fourth argument contained in the function:
 ```
 app.use((error, req, res, next) => {
