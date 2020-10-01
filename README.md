@@ -33,11 +33,11 @@ First, is necessary to know what a Middleware is. In *Express.js*, Middlewares a
 
 Note that the **Error Handler Middleware** is being defined after all other middleware (*app.use* and *route calls*).
 
-In this simple application, a HTML page is render through de EJS (templating language that lets you generate HTML with JavaScript) when a GET request is made for the route "/". This page has a simple form with two input, onde for Username and one for Password. 
+In this simple application, a HTML page is render through the EJS (templating language that lets you generate HTML with JavaScript) when a GET request is made for the route "/". This page has a simple form with two input, one for Username and one for Password. 
 
 Simulating a login service, the application verify the credentials. This is done in the POST request for the route */login*, which receives the body of the request containing the username and password entered. 
 
-To make understanding easier and more practical, no connection to a database is being made. Instead, the system just checks that the Username is "AdminUser" and the password is "admin123". If these credentials are valid, the User will receive a success message. If not. Otherwise will receive a error message, specifying what went wrong.
+To make understanding easier and more practical, no connection to a database is being made. Instead, the system just checks that the Username is "AdminUser" and the Password is "admin123". If these credentials are valid, the User will receive a success message. Otherwise will receive a error message, specifying what went wrong. 
  
 ## :x: Throwing error
 Express.js identifies an Error Handler Middleware through a fourth argument contained in the function:
@@ -71,3 +71,4 @@ app.use((error, req, res, next) => {
 ```
 
 Note that, if the error Status Code is not defined, it receives the Status Code 500 by default.
+
