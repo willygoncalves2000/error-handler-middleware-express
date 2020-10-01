@@ -16,13 +16,17 @@ Clone this repository:
 ```
 $ git clone https://github.com/willygoncalves2000/error-handler-middleware-express.git
 ```
-Go into the repository
+Go into the repository:
 ```
 $ cd error-handler-middleware-express
 ```
-Run (port 3333)
+Install the dependencies:
 ```
-npm start
+$ npm install
+```
+Run (port 3333):
+```
+$ npm start
 ```
 ## Explanation
 First, is necessary to know what a Middleware is. In *Express.js*, Middlewares are functions that have access to *request* and *response*. They can execute any code, make changes to *requests* and *responses*, end the request-response cycle, call the next middleware. One point is important to highlight: a Middleware called first will also be executed first.
